@@ -19,4 +19,11 @@ class GoController extends Controller
         $this->view->Render($this->tplPath, $pageData);
         //print_r($pageData);
     }
+
+    public function random()
+    {
+        $pageData = $this->model->GetRandom();
+        $pageData['_title'] = 'Go Random';
+        $this->view->Render($this->tplPath, $pageData);  
+    }
 }
