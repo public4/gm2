@@ -2,7 +2,9 @@
 
 class GoController extends Controller
 {
-    private $TplPath = "defaultView.php";
+    private $tplPath = "defaultView.php";
+    // private $view;
+    // private $model;
     
     public function __construct()
     {
@@ -12,9 +14,9 @@ class GoController extends Controller
     
     public function DefaultAction()
     {
-        echo "<pre>";
-        $data['x'] = $this->model->GetJ(1, 'q');
-
-        print_r($data);
+        $pageData = $this->model->GetJ(8);
+        $pageData['_title'] = 'Go';
+        $this->view->Render($this->tplPath, $pageData);
+        //print_r($pageData);
     }
 }
