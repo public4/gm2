@@ -26,4 +26,15 @@ class GoController extends Controller
         $pageData['_title'] = 'Go Random';
         $this->view->Render($this->tplPath, $pageData);  
     }
+
+    /**
+     * 
+     * Вывод рандомного вопроса с указанием уровня вопроса
+     */
+    // public function level()
+    // {
+    //     $pageData = $this->model->GetRandom();
+    //     $pageData['_title'] = 'Go Random';
+    //     $this->view->Render($this->tplPath, $pageData);  
+    // }
 }
