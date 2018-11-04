@@ -2,7 +2,7 @@
 
 class GoController extends Controller
 {
-    private $tplPath = "defaultView.php";
+    private $tplPath = "goView.php";
     // private $view;
     // private $model;
     
