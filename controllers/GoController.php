@@ -27,6 +27,11 @@ class GoController extends Controller
         $this->view->Render($this->tplPath, $pageData);  
     }
 
+    public function question()
+    {
+        echo (json_encode ($this->model->getRandomLevel(1), true));
+    }
+
     /**
      * 
      * Вывод рандомного вопроса с указанием уровня вопроса
